@@ -1,0 +1,11 @@
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\bin\Debug\Steroid_space_ship.exe.config
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\bin\Debug\Steroid_space_ship.exe
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\bin\Debug\Steroid_space_ship.pdb
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.csproj.AssemblyReference.cache
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.UI_menu.resources
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.Properties.Resources.resources
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.csproj.GenerateResource.cache
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.csproj.CoreCompileInputs.cache
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.exe
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.pdb
+C:\Users\mborisov\source\repos\Steroid_space_ship\Steroid_space_ship\obj\Debug\Steroid_space_ship.UI_game.resources
