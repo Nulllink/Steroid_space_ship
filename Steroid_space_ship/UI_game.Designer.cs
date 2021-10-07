@@ -31,12 +31,12 @@ namespace Steroid_space_ship
         {
             this.components = new System.ComponentModel.Container();
             this.panel_pause = new System.Windows.Forms.Panel();
+            this.lifetime = new System.Windows.Forms.Label();
             this.scoregame = new System.Windows.Forms.Label();
             this.menuexit = new System.Windows.Forms.Button();
             this.go = new System.Windows.Forms.Button();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lifetime = new System.Windows.Forms.Label();
             this.panel_pause.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,12 +47,24 @@ namespace Steroid_space_ship
             this.panel_pause.Controls.Add(this.scoregame);
             this.panel_pause.Controls.Add(this.menuexit);
             this.panel_pause.Controls.Add(this.go);
-            this.panel_pause.Location = new System.Drawing.Point(0, 0);
+            this.panel_pause.Location = new System.Drawing.Point(793, 1);
             this.panel_pause.Name = "panel_pause";
             this.panel_pause.Size = new System.Drawing.Size(800, 450);
             this.panel_pause.TabIndex = 1;
             this.panel_pause.Visible = false;
             this.panel_pause.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_pause_Paint);
+            // 
+            // lifetime
+            // 
+            this.lifetime.AutoSize = true;
+            this.lifetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lifetime.ForeColor = System.Drawing.Color.White;
+            this.lifetime.Location = new System.Drawing.Point(13, 57);
+            this.lifetime.Name = "lifetime";
+            this.lifetime.Size = new System.Drawing.Size(146, 25);
+            this.lifetime.TabIndex = 2;
+            this.lifetime.Text = "Время игры:";
+            this.lifetime.Click += new System.EventHandler(this.lifetime_Click);
             // 
             // scoregame
             // 
@@ -103,18 +115,6 @@ namespace Steroid_space_ship
             this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lifetime
-            // 
-            this.lifetime.AutoSize = true;
-            this.lifetime.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lifetime.ForeColor = System.Drawing.Color.White;
-            this.lifetime.Location = new System.Drawing.Point(13, 57);
-            this.lifetime.Name = "lifetime";
-            this.lifetime.Size = new System.Drawing.Size(146, 25);
-            this.lifetime.TabIndex = 2;
-            this.lifetime.Text = "Время игры:";
-            this.lifetime.Click += new System.EventHandler(this.lifetime_Click);
             // 
             // UI_game
             // 

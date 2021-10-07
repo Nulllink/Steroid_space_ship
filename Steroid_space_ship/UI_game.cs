@@ -49,6 +49,7 @@ namespace Steroid_space_ship
             else if (e.KeyCode == Keys.Escape)
             {
                 panel_pause.Visible = true;
+                panel_pause.Location = new Point(0, 0);
                 timer1.Stop();
             }
         }
