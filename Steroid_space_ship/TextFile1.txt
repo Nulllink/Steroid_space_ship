@@ -1,0 +1,105 @@
+﻿class Asteroid
+    {
+        static int timing = 0;
+        public static PictureBox Ass_add()
+        {
+            Random r = new Random();
+            int x = r.Next(20, 380);
+            timing += 1;
+            if (timing == 5)
+            {
+                timing = 0;
+                PictureBox pic = new PictureBox
+                {
+                    Name = "picture",
+                    Location = new System.Drawing.Point(x, 20),
+                    BackColor = System.Drawing.Color.White,
+                    Size = new System.Drawing.Size(20, 20),
+                    Tag = 2,
+                };
+                return pic;
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
+
+    class Bullet
+    {
+        static int timing = 0;
+        public static PictureBox Bullet_add()
+        {
+            Random r = new Random();
+            int x = r.Next(20, 380);
+            timing += 1;
+            if (timing == 5)
+            {
+                timing = 0;
+                PictureBox pic = new PictureBox
+                {
+                    Name = "picture",
+                    Location = new System.Drawing.Point(x, 780),
+                    BackColor = System.Drawing.Color.Yellow,
+                    Size = new System.Drawing.Size(10, 10),
+                    Tag = 1,
+                };
+                return pic;
+            }
+            else
+            {
+                return null;
+            }
+        }
+    }
+
+    //UInt32 pic_count=0;
+        //UInt32 pic_count_reverse=0;
+        private void mainTimer_Tick(object sender, EventArgs e)
+        {
+            PictureBox pic_asteroid = Asteroid.Ass_add();
+            PictureBox pic_bullet = Bullet.Bullet_add();
+            if (pic_asteroid != null)
+            {
+                pic_asteroid.Name = "pic" + pic_count;
+                pic_count++;
+                this.Controls.Add(pic_asteroid);
+            }
+            if (pic_bullet != null)
+            {
+                pic_bullet.Name = "picbull" + pic_count;
+                pic_count++;
+                this.Controls.Add(pic_bullet);
+            }
+            for (uint i = pic_count_reverse; i < this.Controls.Count; i++)
+            {
+                if (Controls[$"pic{i}"] != null)
+                {
+                    Controls[$"pic{i}"].Location = new Point(Controls[$"pic{i}"].Location.X, Controls[$"pic{i}"].Location.Y + 10);
+                    if (Controls[$"pic{i}"].Location.Y >= this.Height + 1)
+                    {
+                        pic_count_reverse++;
+                    }
+                }
+                if (Controls[$"picbull{i}"] != null)
+                {
+                    Controls[$"picbull{i}"].Location = new Point(Controls[$"picbull{i}"].Location.X, Controls[$"picbull{i}"].Location.Y - 10);
+                    if (Controls[$"picbull{i}"].Location.Y < 0)
+                    {
+                        pic_count_reverse++;
+                    }
+                }
+                if (Controls[$"picbull{i}"] != null || Controls[$"pic{i}"] != null)
+                {
+                    if (Controls[$"pic{i}"].Location.X < Controls[$"picbull{i}"].Location.X && Controls[$"pic{i}"].Location.Y < Controls[$"picbull{i}"].Location.Y)
+                    {
+                        if (Controls[$"pic{i}"].Location.X > Controls[$"picbull{i}"].Location.X && Controls[$"pic{i}"].Location.Y > Controls[$"picbull{i}"].Location.Y)
+                        {
+                            Controls.Remove(Controls[$"picbull{i}"]);
+                        }
+                    }
+                }
+            }
+
+        }

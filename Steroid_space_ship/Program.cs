@@ -8,6 +8,7 @@ namespace Steroid_space_ship
 {
     static class Program
     {
+        
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -16,7 +17,7 @@ namespace Steroid_space_ship
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UI_menu());
+            Application.Run( new UI_menu());
         }
     }
 }

@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Asteroid.cs" />
+    <Compile Include="Bullet.cs" />
+    <Compile Include="Space_ship.cs" />
     <Compile Include="UI_game.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +96,7 @@
   <ItemGroup>
     <None Include="Resources\background_game.jpg" />
     <None Include="Resources\background_space.jfif" />
+    <Content Include="TextFile1.txt" />
     <Content Include="UI_план.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

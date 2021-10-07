@@ -37,6 +37,8 @@ namespace Steroid_space_ship
             this.go = new System.Windows.Forms.Button();
             this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.mainTimer = new System.Windows.Forms.Timer(this.components);
+            this.gamepanel = new System.Windows.Forms.Panel();
             this.panel_pause.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,9 +49,9 @@ namespace Steroid_space_ship
             this.panel_pause.Controls.Add(this.scoregame);
             this.panel_pause.Controls.Add(this.menuexit);
             this.panel_pause.Controls.Add(this.go);
-            this.panel_pause.Location = new System.Drawing.Point(793, 1);
+            this.panel_pause.Location = new System.Drawing.Point(399, 12);
             this.panel_pause.Name = "panel_pause";
-            this.panel_pause.Size = new System.Drawing.Size(800, 450);
+            this.panel_pause.Size = new System.Drawing.Size(400, 800);
             this.panel_pause.TabIndex = 1;
             this.panel_pause.Visible = false;
             this.panel_pause.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_pause_Paint);
@@ -83,7 +85,7 @@ namespace Steroid_space_ship
             this.menuexit.BackColor = System.Drawing.Color.Black;
             this.menuexit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.menuexit.ForeColor = System.Drawing.Color.White;
-            this.menuexit.Location = new System.Drawing.Point(330, 310);
+            this.menuexit.Location = new System.Drawing.Point(133, 431);
             this.menuexit.Name = "menuexit";
             this.menuexit.Size = new System.Drawing.Size(140, 70);
             this.menuexit.TabIndex = 1;
@@ -96,7 +98,7 @@ namespace Steroid_space_ship
             this.go.BackColor = System.Drawing.Color.Black;
             this.go.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.go.ForeColor = System.Drawing.Color.White;
-            this.go.Location = new System.Drawing.Point(330, 150);
+            this.go.Location = new System.Drawing.Point(133, 187);
             this.go.Name = "go";
             this.go.Size = new System.Drawing.Size(140, 70);
             this.go.TabIndex = 0;
@@ -116,14 +118,29 @@ namespace Steroid_space_ship
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // mainTimer
+            // 
+            this.mainTimer.Enabled = true;
+            this.mainTimer.Interval = 500;
+            this.mainTimer.Tick += new System.EventHandler(this.mainTimer_Tick);
+            // 
+            // gamepanel
+            // 
+            this.gamepanel.BackgroundImage = global::Steroid_space_ship.Properties.Resources.background_game;
+            this.gamepanel.Location = new System.Drawing.Point(0, 0);
+            this.gamepanel.Name = "gamepanel";
+            this.gamepanel.Size = new System.Drawing.Size(400, 800);
+            this.gamepanel.TabIndex = 3;
+            this.gamepanel.Paint += new System.Windows.Forms.PaintEventHandler(this.gamepanel_Paint);
+            // 
             // UI_game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Steroid_space_ship.Properties.Resources.background_game;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(384, 761);
+            this.Controls.Add(this.gamepanel);
             this.Controls.Add(this.panel_pause);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "UI_game";
             this.Text = "Form1";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.UI_game_FormClosed);
@@ -144,5 +161,7 @@ namespace Steroid_space_ship
         private System.Windows.Forms.Label scoregame;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label lifetime;
+        private System.Windows.Forms.Timer mainTimer;
+        private System.Windows.Forms.Panel gamepanel;
     }
 }
